@@ -6,7 +6,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 
 def Contact(request):
@@ -22,7 +22,7 @@ def Contact(request):
         contact.Message=message
         Contact.save()
         return render, HttpResponse("<h1>Thank you. Your contact information and message was successfully submitted!</h1>")
-    return render(request,'base.html')
+    return render(request,'index.html')
 
 # def Contact(request):
 #     submitted=False
